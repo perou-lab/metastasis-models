@@ -3,11 +3,11 @@
 library(ggplot2)
 library(tidyverse)
 
-out_dir <- "output/summarize_EN_performance//"
+out_dir <- "output/summarize_EN_performance/"
 dir.create(paste0(out_dir), recursive = T, showWarnings = F)
 
 ## Combine n2486 summary ## ----------------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/n2486/modules_935+3/"
+root_dir <- "output/train_EN_models/n2486/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
@@ -41,7 +41,7 @@ n2486_data <- n2486_data %>%
 
 
 ## Combine basal summary ## ----------------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/basal_only/modules_935+3/"
+root_dir <- "output/train_EN_models/basal_only/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
@@ -75,7 +75,7 @@ basal_data <- basal_data %>%
 
 
 ## Combine lumA summary ## ----------------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/lumA_only/modules_935+3/"
+root_dir <- "output/train_EN_models/lumA_only/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
@@ -109,7 +109,7 @@ lumA_data <- lumA_data %>%
 
 
 ## Combine lumB summary ## ----------------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/lumB_only/modules_935+3/"
+root_dir <- "output/train_EN_models/lumB_only/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
@@ -143,7 +143,7 @@ lumB_data <- lumB_data %>%
 
 
 ## Combine HER2E summary ## ----------------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/HER2E_only/modules_935+3/"
+root_dir <- "output/train_EN_models/HER2E_only/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
@@ -177,7 +177,7 @@ HER2E_data <- HER2E_data %>%
 
 
 ## Combine LumA + LumB summary ## ----------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/lumA_lumB_only/modules_935+3/"
+root_dir <- "output/train_EN_models/lumA_lumB_only/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
@@ -211,7 +211,7 @@ LumAB_data <- LumAB_data %>%
 
 
 ## Combine HR+/HER2- summary ## ----------------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/HR+HER2_only/modules_935+3/"
+root_dir <- "output/train_EN_models/HR+HER2_only/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
@@ -245,7 +245,7 @@ HR_data <- HR_data %>%
 
 
 ## Combine HER2+ summary ## ----------------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/HER2+_only/modules_935+3/"
+root_dir <- "output/train_EN_models/HER2+_only/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
@@ -279,7 +279,7 @@ HER2_data <- HER2_data %>%
 
 
 ## Combine TNBC summary ## ----------------------------------------------------
-root_dir <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/TNBC_only/modules_935+3/"
+root_dir <- "output/train_EN_models/TNBC_only/modules_935+3/"
 sub_folders <- list.dirs(root_dir, full.names = T, recursive = F)
 
 data_list <- list()
