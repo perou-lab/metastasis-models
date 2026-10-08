@@ -8,7 +8,7 @@ Bulk tumor gene expression data and clinical site of first metastasis data from 
 
 **[scripts](./scripts/)**: All scripts used to combine and process the original datasets and perform all analyses and generate figures. Sub-folders are numerically labeled in the order that they were run. 
 
-**models**: Four models of metastasis highlighted in our manuscript: 
+**[models](./models/)**: Four models of metastasis highlighted in our manuscript: 
 1. **Distant metastasis** (any site [brain, bone, liver, lung, multi-site])
     - 1a. Trained using gene expression signatures
     - 1b. Trained using individual genes
