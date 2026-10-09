@@ -1,7 +1,5 @@
 # Calculate module scores using Breast-Cancer-Modules R package on SCANB test set
 
-setwd("/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github")
-
 out_dir <- "output/apply_EN_models/process_test_sets/SCANB/calculate_modules/"
 dir.create(paste0(out_dir), showWarnings = F, recursive = T)
 
