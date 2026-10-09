@@ -39,12 +39,11 @@ option_list <- list(
   make_option("--relapse_site_2", type = "character", default=NULL, 
               help = "Second relapse group for comparison (usually distant or a 
               specific site). Options are: Distant, OnlyLung, OnlyBone, OnlyLiver,
-              OnlyBrain, MultiMet, AnyLung, AnyBone, AnyLiver, AnyBrain,
-              Distant_notBone", 
+              OnlyBrain, MultiMet, Distant_notBone", 
               metavar = "character"),
   make_option("--input_file", type = "character", default=NULL, 
               help = "Version of the RNA data or features to be included.
-              Options are limma, dwd, pub_modules, all_modules",
+              Options are dwd, pub_modules",
               metavar = "character"),
   make_option("--resampling_method", type = "character", default="boot", 
               help = "Resampling method to be used for training the model. 
@@ -74,11 +73,11 @@ option_list <- list(
               metavar="character"),
   make_option("--output_directory", type = "character", default = NULL, 
               help = "Path to output directory:
-              e.g. ///Anna/metastatic_site_EN/output/Modules/n2486/", 
+              e.g. /output/Modules/n2486/", 
               metavar="character"),
   make_option("--metadata_directory", type = "character", default = NULL,
               help = "Path to directory holding metadata file: e.g.
-              //datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_2/output/HER2+_only_analysis/balanced_stratification/"),
+              /output/HER2+_only_analysis/balanced_stratification/"),
   make_option("--metadata_file", type = "character", default = NULL, 
               help = "Metadata file name: e.g.
               n364_HER2+_only_combined_metadata_balanced_stratification.txt"), 
