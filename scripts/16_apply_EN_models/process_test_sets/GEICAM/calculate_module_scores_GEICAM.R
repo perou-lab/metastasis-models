@@ -1,5 +1,7 @@
 # Calculate module scores using Breast-Cancer-Modules R package on GEICAM test set
 
+geicam_expr_path <- ""
+
 library(devtools)
 library(tidyverse)
 load_all("source_files/Breast-Cancer-Modules/")
@@ -22,7 +24,7 @@ geicam_meta <- read_excel("source_files/AURORA_retrospective_Supplementary_Table
                                  "Lung", "Lymph node"),
                              `Anatomic Site Groups`, "Other"))
 
-geicam_expr <- read.table("/datastore/lbcfs/projects/nextflow/peroulab/aurora_123_rap96_geicam_204_harmony_186_sg/rna-seq-quant-2.5/hg38/gencode_v36/merge/summary/vqg3nccallvj8jbsz/salmon_ensemblgid.matrix.tsv",
+geicam_expr <- read.table(geicam_expr_path,
                           sep = "\t", check.names = F, header = T, row.names = 1)
 geicam_expr <- geicam_expr[,grepl("AP_", colnames(geicam_expr))]
 colnames(geicam_expr) <- sub(".*[YCS]_", "", colnames(geicam_expr))
