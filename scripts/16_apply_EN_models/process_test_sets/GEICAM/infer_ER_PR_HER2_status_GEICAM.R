@@ -1,5 +1,7 @@
 # Infer ER, PR, HER2 status based on Youden's index for GEICAM (n204)
 
+geicam_expr_path <- ""
+
 library(tidyverse)
 library(cutpointr)
 library(readxl)
@@ -8,7 +10,7 @@ out_dir <- "output/apply_EN_models/process_test_sets/GEICAM/infer_ER_PR_HER2/"
 dir.create(out_dir, showWarnings = F, recursive = T)
 
 # Read in GEICAM expression data
-geicam_expr <- read.table("/datastore/lbcfs/projects/nextflow/peroulab/aurora_123_rap96_geicam_204_harmony_186_sg/rna-seq-quant-2.5/hg38/gencode_v36/merge/summary/vqg3nccallvj8jbsz/salmon_ensemblgid.matrix.tsv",
+geicam_expr <- read.table(geicam_expr_path,
                           sep = "\t", check.names = F, header = T, row.names = 1)
 geicam_expr <- geicam_expr[,grepl("AP_", colnames(geicam_expr))]
 colnames(geicam_expr) <- sub(".*[YCS]_", "", colnames(geicam_expr))
