@@ -6,8 +6,8 @@ Bulk tumor gene expression data and clinical site of first metastasis data from 
 
 **`data/`**: Processed clinical data and the expression datasets
    - **`expression_data/`**: 5 datasets after batch correction using distance weighted discrimination (all datasets adjusted to METABRIC, which was used as reference). Expression data for each sample can be combined to generate the complete expression matrix.
-   - `n2486_combined_meta_w_PAM50_CLOW_subtypes.txt`: associated metadata including clinical and PAM50 subtypes for n = 2486 dataset.
-   - `n2486_941_modules_3_receptors.RDS`: scores for 941 gene expression modules (+ clinical receptor status) for n = 2486 dataset.
+   - **`n2486_combined_meta_w_PAM50_CLOW_subtypes.txt`**: associated metadata including clinical and PAM50 subtypes for n = 2486 dataset.
+   - **`n2486_941_modules_3_receptors.RDS`**: scores for 941 gene expression modules (+ clinical receptor status) for n = 2486 dataset.
 
 **`scripts/`**: All scripts used to combine and process the original datasets and perform all analyses and generate figures. Sub-folders are numerically labeled in the order that they were run. 
 
