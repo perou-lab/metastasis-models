@@ -12,15 +12,9 @@ library(patchwork)
 out_dir <- "output/apply_EN_models/"
 
 ## SCAN-B data / scores:
-scanb_meta <- read.table("../datasets/SCANB_gitlab/SCAN-B_6329_Clinical_Data.txt", 
-                       sep = "\t", header = T, check.names = F)
-
-scanb_distant_module <- read.table("output/apply_EN_models/SCANB/modules_935+3/distant/SCANB_distant_module_EN_model_scores.tsv", 
+scanb_score <- read.table("output/apply_EN_models/SCANB/modules_935+3/distant/SCANB_distant_module_EN_model_scores.tsv", 
                              sep = "\t", header = T, check.names = F) %>% 
-  rename(Distant_Module_EN_score = Distant_EN_score)
-
-scanb_score <- scanb_meta %>% 
-  left_join(scanb_distant_module, by = "Merged")
+  rename(Distant_Module_EN_score = Distant_EN_Score)
 
 ## UNC-337 data / scores: 
 unc337_meta <- read.table("output/apply_EN_models/process_test_sets/UNC337/final/UNC337_n239_metadata.tsv", 
@@ -28,7 +22,7 @@ unc337_meta <- read.table("output/apply_EN_models/process_test_sets/UNC337/final
 
 unc337_distant_module <- read.table("output/apply_EN_models/UNC337/modules_935+3/distant/UNC337_distant_module_EN_model_scores.tsv",
                                     sep = "\t", header = T, check.names = F) %>% 
-  rename(Distant_Module_EN_score = Distant_EN_score)
+  rename(Distant_Module_EN_score = Distant_EN_Score)
 
 unc337_score <- unc337_meta %>% 
   left_join(unc337_distant_module, by = "Sample_GEO_accession") %>% 
