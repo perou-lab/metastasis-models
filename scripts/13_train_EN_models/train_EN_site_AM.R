@@ -93,25 +93,6 @@ option_list <- list(
 opt_parser <- OptionParser(option_list=option_list)
 opt <- parse_args(opt_parser)
 
-# seed <- 124022
-# percent_train <- "75"
-# percent_test <- "25"
-# relapse_site1 <- "NoRel"
-# relapse_site2 <- "OnlyBone"
-# file <- "pub_modules"
-# file <- "dwd"
-# method <- "boot"
-# train_metric <- "Accuracy"
-# n_bootstraps <- 1000
-# alphas <- seq(0.1,0.9,0.1)
-# n_lambdas <- 100
-# output_directory <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/test/train_EN_models/n2486/modules_935+3/"
-# output_directory <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/train_EN_models/n2486/genes_10814/OLD_DWD/"
-# top_features <- 30
-# meta_source_directory <- "/datastore/nextgenout4/share/labs/peroulab/Anna/metastatic_site_EN_github/output/balanced_stratification/n2486/"
-# metadata_file <- "n2486_complete_meta_w_onlysite_stratification.txt"
-# dataset <- "n2486"
-
 seed <- opt$seed
 percent_train <- opt$percent_train
 percent_test <- opt$percent_test
